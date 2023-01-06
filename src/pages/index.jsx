@@ -8,7 +8,6 @@ import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import {
   TwitterIcon,
-  InstagramIcon,
   GitHubIcon,
   LinkedInIcon,
 } from '@/components/SocialIcons'
@@ -17,10 +16,8 @@ import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+import logoCoinbase from '@/images/logos/coinbase.svg'
+import logoShopify from '@/images/logos/shopify.svg'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
@@ -139,35 +136,21 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
-      logo: logoPlanetaria,
-      start: '2019',
+      company: 'Coinbase',
+      title: 'Software Developer',
+      logo: logoCoinbase,
+      start: '2022',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear(),
       },
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
-    },
-    {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
-    },
-    {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      company: 'Shopify',
+      title: 'Senior Software Engineer',
+      logo: logoShopify,
+      start: '2019',
+      end: '2021',
     },
   ]
 
@@ -210,7 +193,7 @@ function Resume() {
           </li>
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
+      <Button onClick={() => window.open('/cv.pdf')} variant="secondary" className="group mt-6 w-full">
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
@@ -272,11 +255,6 @@ export default function Home({ articles }) {
               icon={TwitterIcon}
             />
             <SocialLink
-              href="https://instagram.com/sergiy.eth"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
-            <SocialLink
               href="https://github.com/sergical"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
@@ -298,7 +276,6 @@ export default function Home({ articles }) {
             ))}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
             <Resume />
           </div>
         </div>
