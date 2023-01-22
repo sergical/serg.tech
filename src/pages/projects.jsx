@@ -1,41 +1,24 @@
-import Image from 'next/future/image'
-import Head from 'next/head'
-
 import { Card } from '@/components/Card'
+import Head from 'next/head'
+import Image from 'next/future/image'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
+import logoPuma from '@/images/logos/puma.jpg'
+import logoRuutly from '@/images/logos/ruutly.png'
 
 const projects = [
   {
-    name: 'Animaginary',
+    name: 'Puma Browser',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
+      'Puma is a mobile browser and wallet for the Web3 ecosystem. Private by design.',
+    link: { href: 'https://pumabrowser.com', label: 'website' },
+    logo: logoPuma,
   },
   {
-    name: 'HelioStream',
+    name: 'Ruutly',
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
-  },
-  {
-    name: 'cosmOS',
-    description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
-  },
-  {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+      'Ruutly transforms old school, text-only job postings into beautifully-branded, visual candidate experiences – with zero extra work for recruiters.',
+    link: { href: 'https://ruutly.com', label: 'website' },
+    logo: logoRuutly,
   },
 ]
 
@@ -54,7 +37,7 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Projects - Spencer Sharp</title>
+        <title>Projects - Sergiy Dybskiy</title>
         <meta
           name="description"
           content="Things I’ve made trying to put my dent in the universe."
@@ -62,7 +45,7 @@ export default function Projects() {
       </Head>
       <SimpleLayout
         title="Things I’ve made trying to put my dent in the universe."
-        intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+        intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of."
       >
         <ul
           role="list"
@@ -74,7 +57,7 @@ export default function Projects() {
                 <Image
                   src={project.logo}
                   alt=""
-                  className="h-8 w-8"
+                  className="h-8 w-8 rounded-full"
                   unoptimized
                 />
               </div>

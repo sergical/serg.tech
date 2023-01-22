@@ -1,14 +1,14 @@
-import Image from 'next/future/image'
-import Head from 'next/head'
-import Link from 'next/link'
-import clsx from 'clsx'
-
-import { Container } from '@/components/Container'
 import {
-  TwitterIcon,
   GitHubIcon,
   LinkedInIcon,
+  TwitterIcon,
 } from '@/components/SocialIcons'
+
+import { Container } from '@/components/Container'
+import Head from 'next/head'
+import Image from 'next/future/image'
+import Link from 'next/link'
+import clsx from 'clsx'
 import sergImage from '@/images/sergiy.jpg'
 
 function SocialLink({ className, href, children, icon: Icon }) {
@@ -40,10 +40,10 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About - Spencer Sharp</title>
+        <title>About - Sergiy Dybskiy</title>
         <meta
           name="description"
-          content="I’m Spencer Sharp. I live in New York City, where I design the future."
+          content="I’m Sergiy Dybskiy. I live in London, Ontario, Canada, where I hack around and do other things."
         />
       </Head>
       <Container className="mt-16 sm:mt-32">
@@ -60,11 +60,17 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I’m Sergiy Dybskiy. I live in London, Ontario, where I do .
+              I’m Sergiy Dybskiy. I live in London, Ontario, where I hack about and cuddle my goldendoodle, Luna 🐶.
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                I care a lot about the user and their experience and I try to build software with that in mind.
+                In Kharkiv, Ukraine, born and raised. On the soccer field is where I spent most of my days. Chillin&apos; out, hackin&apos;, relaxin&apos; all cool, all shooting some soccer balls outside of the school. 
+              </p>
+              <p>
+                Then we moved to Canada 🇨🇦 and my older brother Yuriy encouraged me to pursue computer science. Tried that at University of Toronto for a bit but decided to continue on a self-taught path. Did a startup for 4 years. It has recently been aquired which is cool. 
+              </p>
+              <p>
+                Proceeded to help my brother build an MVP of <Link href="https://pumabrowser.com/?ref=serg.tech" target="_blank" rel="noreferrer" className="text-teal-500">Puma Browser</Link> before joing Shopify and learning there for a few years. 
               </p>
 
               <p>

@@ -1,9 +1,8 @@
-import Head from 'next/head'
-
 import { Card } from '@/components/Card'
+import Head from 'next/head'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import { getAllArticles } from '@/lib/getAllArticles'
 import { formatDate } from '@/lib/formatDate'
+import { getAllArticles } from '@/lib/getAllArticles'
 
 function Article({ article }) {
   return (
@@ -38,14 +37,14 @@ export default function ArticlesIndex({ articles }) {
   return (
     <>
       <Head>
-        <title>Articles - Spencer Sharp</title>
+        <title>Articles - Sergiy Dybskiy</title>
         <meta
           name="description"
           content="All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order."
         />
       </Head>
       <SimpleLayout
-        title="Writing on software design, company building, and the aerospace industry."
+        title="Writing on software design, company building, and other topics I find interesting."
         intro="All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order."
       >
         <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
